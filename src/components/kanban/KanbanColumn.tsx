@@ -92,13 +92,11 @@ export function KanbanColumn({ column, tasks, onEdit, onDelete, onAddTask }: Pro
         <button
           onClick={() => onAddTask(column)}
           className="relative z-10 flex items-center justify-center w-5 h-5 rounded transition-all"
-          style={{ color: 'var(--text-dim)' }}
+          style={{ color: meta.accentColor }}
           onMouseEnter={(e) => {
-            ;(e.currentTarget as HTMLButtonElement).style.color = meta.accentColor
             ;(e.currentTarget as HTMLButtonElement).style.background = meta.glowVar
           }}
           onMouseLeave={(e) => {
-            ;(e.currentTarget as HTMLButtonElement).style.color = 'var(--text-dim)'
             ;(e.currentTarget as HTMLButtonElement).style.background = 'transparent'
           }}
           title="Add task"
